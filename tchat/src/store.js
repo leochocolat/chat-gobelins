@@ -24,23 +24,39 @@ socket.on('connect', () => {
     });
 
     socket.on('message new', ({message, messages}) => {
-        let newArray = messages.slice(store.messages.length - 1);
-        for (let i = 0; i < newArray.length; i++) {
-            newArray[i].style = store.getRandomStyle();
-            store.messages.push(newArray[i]);
+        let newArray = [];
+
+        if (messages > store.messages) {
+            for (let i = 0; i < messages.length; i++) {
+                messages[i].style = store.getRandomStyle();
+                store.messages.push(messages[i]);
+            }
+        } else {
+            message.style = store.getRandomStyle();
+            store.messages.push(message);
         }
+        console.log(newArray);
     });
 
-    socket.on('message update', ({messages}) => {
-        let newArray = messages.slice(store.messages.length - 1);
-        for (let i = 0; i < newArray.length; i++) {
-            newArray[i].style = store.getRandomStyle();
-            store.messages.push(newArray[i]);
-        }
-    });
+    // socket.on('message update', ({messages}) => {
+    //     console.log('MESSAGE UPDATE');
+    //     let newArray = messages.slice(store.messages.length - 1);
+    //     for (let i = 0; i < newArray.length; i++) {
+    //         newArray[i].style = store.getRandomStyle();
+    //         store.messages.push(newArray[i]);
+    //     }
+    // });
 
     socket.on('command new', (msg) => {
-        console.log('command new', msg)
+        console.log(msg.message.text);
+        if (msg.message.text == '/shake') {
+            for (let i = 0; i < store.messages.length; i++) {
+                store.messages[i].style = store.getRandomStyle();
+            }
+        }
+        if (msg.message.text == '/clear') {
+            store.messages = [];
+        }
     });
 
     socket.on('chat error', ({ code, message }) => {
