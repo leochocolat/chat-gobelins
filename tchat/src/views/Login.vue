@@ -1,9 +1,7 @@
 <template>
-  <div>
-    <h1>Login</h1>
+  <div class="page-login">
     <form @submit.prevent="onSubmit">
       <input type="text" v-model="username" placeholder="username">
-      <button type="submit">SUBMIT</button>
     </form>
   </div>
 </template>
@@ -29,5 +27,15 @@ export default {
 </script>
 
 <style>
+
+.page-login {
+  display: flex;
+
+  width: 100%;
+  height: 100vh;
+
+  justify-content: center;
+  align-items: center;  
+}
 
 </style>

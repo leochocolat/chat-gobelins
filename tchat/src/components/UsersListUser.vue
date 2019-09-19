@@ -1,5 +1,5 @@
 <template>
-  <li class="component__users-list__user">
+  <li>
       {{user.username}}
   </li>
 </template>

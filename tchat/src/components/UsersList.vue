@@ -1,15 +1,18 @@
 <template>
   <div>
-      <!-- <p>connected as {{user.name}}</p> -->
-      <p>
-          {{usersCount}} Users connected
-      </p>
+      <p>{{usersCount}} Users connected</p>
       <ul class="component__users-list">
           <UsersListUser v-for="(user, i) in users" :user="user" :key="i" />
-          <!-- IMPORT COMPONENT UsersListUser -->
       </ul>
   </div>
 </template>
+
+<style scoped>
+
+
+
+
+</style>
 
 <script>
 import UsersListUser from './UsersListUser';
@@ -31,7 +34,3 @@ export default {
     }
 }
 </script>
-
-<style>
-
-</style>

@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <h1>Hello Messages List</h1>
+  <div class="message-list">
     <ul>
         <MessagesListMessage :message="message" :user="user" v-for="(message, i) in messages" :key="i"/>
     </ul>
@@ -23,12 +22,26 @@ export default {
             type: Object,
             required: true
         }
+    },
+    methods: {
+        
     }
 }
 </script>
 
 <style>
+.message-list {
+    height: 100%;
+}
+
 ul {
+    position: relative;
+
+    padding: 0;
+    margin: 0;
+
+    height: 100%;
+
     list-style: none;
 }
 </style>

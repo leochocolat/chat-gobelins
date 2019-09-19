@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <UsersList :users="store.users" :user="store.user"/>
+  <div class="page__chat">
+    <!-- <UsersList :users="store.users" :user="store.user"/> -->
     <MessagesList :messages="store.messages" :user="store.user"/>
     <MessageBox @messageSent="onMessageSent"/>  
   </div>
@@ -33,5 +33,11 @@ export default {
 </script>
 
 <style>
+
+  .page__chat {
+    width: 100%;
+    height: 100vh;
+  }
+
 
 </style>
