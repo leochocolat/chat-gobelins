@@ -1,6 +1,6 @@
 <template>
-  <li :class="randomStyle" class="message-list__item sticker" v-on:click="onClickHandler">
-        <p :class="isOwner" class="sicker__content">{{message.text}}</p>
+  <li :class="randomStyle" class="message-list__item sticker" v-bind:style="randomPosition" >
+        <p :class="message.style.className" class="sicker__content" >{{message.text}}</p>
       <!-- <span>{{message.user.username}} : </span> -->
       <!-- <p>{{formatedTime}}</p> -->
   </li>
@@ -33,6 +33,12 @@ export default {
                 return ''
             }
         },
+        randomPosition() {
+            let transform = `translate(${this.message.style.position.x}px, ${this.message.style.position.y}px) rotate(${Math.random() * (90 + 90) - 90}deg)`
+
+            console.log({ transform: transform });
+            return { transform };
+        },
         randomStyle() { 
             let classes = [
                 "class1",
@@ -54,25 +60,7 @@ export default {
     },
     methods: {
         init() {
-            // console.log(this.$el);
-        },
-        randomPosition() {
-            let viewport = {
-                width: window.innerWidth,
-                height: window.innerHeight
-            }
-
-            let sticker = document.querySelector('.sticker');
-
-            let newPosition = {
-                x: Math.random() * (viewport.width/2 - sticker.getBoundingClientRect().width/2),
-                y: Math.random() * (viewport.height/2 - sticker.getBoundingClientRect().height/2),
-            }
-
-            TweenLite.set(sticker, { x: newPosition.x, y: newPosition.y, rotation: Math.random() * (90 + 90) - 90 });
-        },
-        onClickHandler() {
-            
+            console.log(this.message);
         },
         draggable() {
             Draggable.create(".sticker", {type: "x,y", edgeResistance: 1, throwProps: true, onDragEnd: (e) => { e.path[1].style.zIndex = 0 } });
@@ -80,7 +68,6 @@ export default {
     },
     mounted() {
         this.init();
-        this.randomPosition();
         this.draggable();
     }
 }

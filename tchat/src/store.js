@@ -24,15 +24,19 @@ socket.on('connect', () => {
     });
 
     socket.on('message new', ({message, messages}) => {
-        if (messages.length > store.messages.length) {
-            store.messages = messages;
-        } else {
-            store.messages.push(message);
+        let newArray = messages.slice(store.messages.length - 1);
+        for (let i = 0; i < newArray.length; i++) {
+            newArray[i].style = store.getRandomStyle();
+            store.messages.push(newArray[i]);
         }
     });
 
     socket.on('message update', ({messages}) => {
-        store.messages = messages;
+        let newArray = messages.slice(store.messages.length - 1);
+        for (let i = 0; i < newArray.length; i++) {
+            newArray[i].style = store.getRandomStyle();
+            store.messages.push(newArray[i]);
+        }
     });
 
     socket.on('command new', (msg) => {
@@ -78,6 +82,36 @@ const store = new Vue({
             sessionStorage.clear();
             socket.disconnect();
             router.push('/login')
+        },
+        getRandomStyle() {
+            let viewport = {
+                width: window.innerWidth,
+                height: window.innerHeight
+            }
+
+            let newPosition = {
+                x: Math.random() * (viewport.width/2 + viewport.width/2) - viewport.width/2,
+                y: Math.random() * (viewport.height/2 + viewport.height/2) - viewport.height/2,
+            }
+            let classes = [
+                "class1",
+                "class2",
+                "class3",
+                "class4",
+                "class5",
+                "class6",
+                "class7",
+                "class8",
+                "class9",
+                "class10",
+            ];
+
+            let random = parseInt(Math.random() * classes.length);
+
+            return {
+                position: newPosition,
+                className: classes[random]
+            };
         }
     },
 });

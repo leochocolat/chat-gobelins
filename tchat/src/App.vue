@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <Navbar/>
     <router-view/>
   </div>
 </template>
@@ -28,3 +29,13 @@ input {
   color: #2c3e50;
 }
 </style>
+
+<script>
+import Navbar from './components/Navbar.vue';
+
+export default {
+    components: {
+        Navbar
+    }
+}
+</script>
