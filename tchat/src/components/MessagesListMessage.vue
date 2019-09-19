@@ -1,6 +1,6 @@
 <template>
-  <li :class="randomStyle" class="message-list__item sticker" v-bind:style="randomPosition" >
-        <p :class="message.style.className" class="sicker__content" >{{message.text}}</p>
+  <li :class="message.style.className" class="message-list__item sticker" v-bind:style="randomPosition" >
+        <p :class="isOwner" class="sicker__content" >{{message.text}}</p>
       <!-- <span>{{message.user.username}} : </span> -->
       <!-- <p>{{formatedTime}}</p> -->
   </li>
@@ -36,34 +36,19 @@ export default {
         randomPosition() {
             let transform = `translate(${this.message.style.position.x}px, ${this.message.style.position.y}px) rotate(${Math.random() * (90 + 90) - 90}deg)`
 
-            console.log({ transform: transform });
             return { transform };
-        },
-        randomStyle() { 
-            let classes = [
-                "class1",
-                "class2",
-                "class3",
-                "class4",
-                "class5",
-                "class6",
-                "class7",
-                "class8",
-                "class9",
-                "class10",
-            ];
-
-            let random = parseInt(Math.random() * classes.length);
-
-            return classes[random];
         }
     },
     methods: {
         init() {
-            console.log(this.message);
+            
         },
         draggable() {
-            Draggable.create(".sticker", {type: "x,y", edgeResistance: 1, throwProps: true, onDragEnd: (e) => { e.path[1].style.zIndex = 0 } });
+            Draggable.create(".sticker", {type: "x,y", edgeResistance: 1, throwProps: true, onClick: (e) => { e.path[1].style.zIndex = 0 }, onDragEnd: (e) => { e.path[1].style.zIndex = 0 } });
+        },
+        removeZIndex(e) {
+            console.log(e.srcElement);
+            e.srcElement.style.zIndex = 0.
         }
     },
     mounted() {

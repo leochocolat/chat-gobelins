@@ -1,8 +1,8 @@
 <template>
-  <div>
-      <form action="" @submit.prevent="onFormSubmit">
-          <input v-on:input="onInputHandler" type="text" class="Hello" placeholder="Your Message" v-model="message" :class="className">
-      </form>
+  <div class="message-box">
+        <form action="" @submit.prevent="onFormSubmit">
+            <input v-on:input="onInputHandler" v-on:blur="focusOnInput" type="text" class="Hello" placeholder="Your Message" v-model="message" :class="className">
+        </form>
   </div>
 </template>
 
@@ -65,7 +65,13 @@ export default {
                     this.className = '';
                 };
             }
+        },
+        focusOnInput() {
+            this.$el.querySelector('input').focus();
         }
+    },
+    mounted() {
+        this.focusOnInput();
     },
     computed: {
             
@@ -78,10 +84,9 @@ export default {
     input {
         position: absolute;
         left: 50%;
-        right: 0;
-        bottom: 100px;
+        top: 50%;
 
-        transform: translateX(-50%);
+        transform: translate(-50%, -50%);
 
         width: auto;
 
@@ -91,6 +96,10 @@ export default {
         background-color: transparent;
         border: none;
         outline: none;
+
+        caret-color: transparent;
+        pointer-events: none;
+
 
         &.class1, &.class2, &.class3, &.class4, 
         &.class5, &.class6, &.class7, &.class8, 
@@ -104,11 +113,11 @@ export default {
             line-height: 1em;
             padding: 30px 30px;
 
-            transform: translateX(-50%) rotate(-5deg);
+            transform: translate(-50%, -50%) rotate(-5deg);
         }
 
         &::placeholder {
-            color: white;
+            color: transparent;
         }
     }
 </style>
