@@ -1,0 +1,10 @@
+@font-face {
+    font-family: '.';
+    src: url('396082978a2ce8edb21cf74f365d784e.woff2') format('woff2'),
+        url('396082978a2ce8edb21cf74f365d784e.woff') format('woff'),
+        url('396082978a2ce8edb21cf74f365d784e.ttf') format('truetype'),
+        url('396082978a2ce8edb21cf74f365d784e.svg#.') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+

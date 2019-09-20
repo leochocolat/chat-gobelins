@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Monarch';
+    src: url('Monarch.woff2') format('woff2'),
+        url('Monarch.woff') format('woff'),
+        url('Monarch.ttf') format('truetype'),
+        url('Monarch.svg#Monarch') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+

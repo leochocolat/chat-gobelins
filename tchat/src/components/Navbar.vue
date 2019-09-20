@@ -1,8 +1,8 @@
 <template>
   <div class="navbar">
-      <span class="navbar__item">
-          STICK
-      </span>
+      <div class="navbar__item-container">
+          <span class="navbar__item">STICK</span>
+      </div>
   </div>
 </template>
 
@@ -16,6 +16,24 @@ export default {
           this.elements.push(this.$el.querySelector('.navbar__item')); 
           this.delta = 0; 
         },
+        animate() {
+            let scrollDiv = document.querySelector('.navbar');
+            let content = scrollDiv.querySelector('.navbar__item-container');
+            console.log(scrollDiv, content, span);
+            let span = content.querySelector('.navbar__item');
+            let i;
+            let spanCloned;
+            let contentCloned;
+
+
+            for (i = 0; i < 20; i += 1) {
+                spanCloned = span.cloneNode(true);
+                content.appendChild(spanCloned);
+            }
+            contentCloned = content.cloneNode(true);
+            scrollDiv.appendChild(contentCloned);
+            TweenMax.to('.navbar__item-container', 20, { x: -content.offsetWidth, repeat:-1, ease:Linear.easeNone });
+        },
         createElements() {
             let v = {
                 w: window.innerWidth,
@@ -27,9 +45,7 @@ export default {
 
             let item = this.createElement();
 
-            let amount = Math.ceil(v.w / modelSize);
-            console.log(amount);
-
+            let amount = Math.ceil(v.w / modelSize);    
             for (let i = 0; i <= amount; i++) {
                 let clone = item.cloneNode(true);
                 document.querySelector('.navbar').appendChild(clone);
@@ -46,7 +62,8 @@ export default {
     },  
     mounted() {
         this.init();
-        this.createElements();
+        this.animate();
+        // this.createElements();
     }
 }
 </script>
@@ -58,11 +75,11 @@ export default {
         top: 0;
 
         width: 100%;
-        height: 100px;
 
         background-color: black;
 
         text-align: left;
+        font-family: 'GoboldBold';
 
         display: flex;
         flex-wrap: nowrap;
@@ -79,6 +96,7 @@ export default {
 
         text-transform: uppercase;
         color: white;
-        font-size: 90px;
+        font-size: 80px;
+        line-height: 1.2em;
     }
 </style>

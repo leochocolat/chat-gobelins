@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'Pilat Extended';
+    src: url('PilatExtended-Thin.woff2') format('woff2'),
+        url('PilatExtended-Thin.woff') format('woff'),
+        url('PilatExtended-Thin.ttf') format('truetype'),
+        url('PilatExtended-Thin.svg#PilatExtended-Thin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pilat Extended';
+    src: url('PilatExtended-Black.woff2') format('woff2'),
+        url('PilatExtended-Black.woff') format('woff'),
+        url('PilatExtended-Black.ttf') format('truetype'),
+        url('PilatExtended-Black.svg#PilatExtended-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pilat Extended';
+    src: url('PilatExtended-Regular.woff2') format('woff2'),
+        url('PilatExtended-Regular.woff') format('woff'),
+        url('PilatExtended-Regular.ttf') format('truetype'),
+        url('PilatExtended-Regular.svg#PilatExtended-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pilat Extended Book';
+    src: url('PilatExtended-Book.woff2') format('woff2'),
+        url('PilatExtended-Book.woff') format('woff'),
+        url('PilatExtended-Book.ttf') format('truetype'),
+        url('PilatExtended-Book.svg#PilatExtended-Book') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pilat Extended Demi';
+    src: url('PilatExtended-DemiBold.woff2') format('woff2'),
+        url('PilatExtended-DemiBold.woff') format('woff'),
+        url('PilatExtended-DemiBold.ttf') format('truetype'),
+        url('PilatExtended-DemiBold.svg#PilatExtended-DemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pilat Extended';
+    src: url('PilatExtended-Light.woff2') format('woff2'),
+        url('PilatExtended-Light.woff') format('woff'),
+        url('PilatExtended-Light.ttf') format('truetype'),
+        url('PilatExtended-Light.svg#PilatExtended-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pilat Extended';
+    src: url('PilatExtended-Bold.woff2') format('woff2'),
+        url('PilatExtended-Bold.woff') format('woff'),
+        url('PilatExtended-Bold.ttf') format('truetype'),
+        url('PilatExtended-Bold.svg#PilatExtended-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pilat Extended';
+    src: url('PilatExtended-Heavy.woff2') format('woff2'),
+        url('PilatExtended-Heavy.woff') format('woff'),
+        url('PilatExtended-Heavy.ttf') format('truetype'),
+        url('PilatExtended-Heavy.svg#PilatExtended-Heavy') format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
+

@@ -1,7 +1,7 @@
 <template>
   <li :class="message.style.className" class="message-list__item sticker" v-bind:style="randomPosition" >
-        <p :class="isOwner" class="sicker__content" >{{message.text}}</p>
-      <!-- <span>{{message.user.username}} : </span> -->
+        <p :class="isOwner" class="sticker__content" >{{message.text}}</p>
+        <span class="sticker__username">@{{message.user.username}}</span>
       <!-- <p>{{formatedTime}}</p> -->
   </li>
 </template>
@@ -58,19 +58,26 @@ export default {
 }
 </script>
 
-<style lang="scss" >
+<style lang="scss">
 .message-list__item {
     position: absolute;
     left: 30%;
     top: 40%;
-
-    min-height: 100px;
 }
 
 .sticker {
     border: black 3px solid;
     background: #efefef;
+
     font-size: 80px;
+}
+
+.sticker__username {
+    position: absolute;
+    left: 30px;
+    bottom: 12px;
+
+    font-size: 14px;
 }
 
 .sicker__content {
@@ -83,7 +90,7 @@ export default {
 }
 
 .isOwner {
-    color: red;
+    // color: red;
 }
 
 /* STICKER CUSTOM STYLES */

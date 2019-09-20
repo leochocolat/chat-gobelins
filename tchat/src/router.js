@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Chat from './views/Chat.vue';
 import Login from './views/Login.vue';
+import Stickers from './views/Stickers.vue';
 import store from './store';
 
 Vue.use(Router);
@@ -22,6 +23,11 @@ const router = new Router({
       path: '/login',
       name: 'login',
       component: Login,
+    },
+    {
+      path: '/stickers',
+      name: 'stickers',
+      component: Stickers,
     },
     // {
     //   path: '/about',

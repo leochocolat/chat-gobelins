@@ -15,7 +15,8 @@ export default {
     },
     props: {
         messages: {
-            type: Array,
+ 
+ type: Array,
             required: true
         },
         user: {
@@ -44,4 +45,5 @@ ul {
 
     list-style: none;
 }
+
 </style>

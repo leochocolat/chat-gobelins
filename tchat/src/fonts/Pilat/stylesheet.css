@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'Pilat Book';
+    src: url('Pilat-Book.woff2') format('woff2'),
+        url('Pilat-Book.woff') format('woff'),
+        url('Pilat-Book.ttf') format('truetype'),
+        url('Pilat-Book.svg#Pilat-Book') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pilat Demi';
+    src: url('Pilat-DemiBold.woff2') format('woff2'),
+        url('Pilat-DemiBold.woff') format('woff'),
+        url('Pilat-DemiBold.ttf') format('truetype'),
+        url('Pilat-DemiBold.svg#Pilat-DemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pilat';
+    src: url('Pilat-Regular.woff2') format('woff2'),
+        url('Pilat-Regular.woff') format('woff'),
+        url('Pilat-Regular.ttf') format('truetype'),
+        url('Pilat-Regular.svg#Pilat-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pilat';
+    src: url('Pilat-Black.woff2') format('woff2'),
+        url('Pilat-Black.woff') format('woff'),
+        url('Pilat-Black.ttf') format('truetype'),
+        url('Pilat-Black.svg#Pilat-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pilat';
+    src: url('Pilat-Heavy.woff2') format('woff2'),
+        url('Pilat-Heavy.woff') format('woff'),
+        url('Pilat-Heavy.ttf') format('truetype'),
+        url('Pilat-Heavy.svg#Pilat-Heavy') format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pilat';
+    src: url('Pilat-Bold.woff2') format('woff2'),
+        url('Pilat-Bold.woff') format('woff'),
+        url('Pilat-Bold.ttf') format('truetype'),
+        url('Pilat-Bold.svg#Pilat-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pilat';
+    src: url('Pilat-Light.woff2') format('woff2'),
+        url('Pilat-Light.woff') format('woff'),
+        url('Pilat-Light.ttf') format('truetype'),
+        url('Pilat-Light.svg#Pilat-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pilat';
+    src: url('Pilat-Thin.woff2') format('woff2'),
+        url('Pilat-Thin.woff') format('woff'),
+        url('Pilat-Thin.ttf') format('truetype'),
+        url('Pilat-Thin.svg#Pilat-Thin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+}
+

@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'Pilat Wide';
+    src: url('PilatWide-Light.woff2') format('woff2'),
+        url('PilatWide-Light.woff') format('woff'),
+        url('PilatWide-Light.ttf') format('truetype'),
+        url('PilatWide-Light.svg#PilatWide-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pilat Wide';
+    src: url('PilatWide-Heavy.woff2') format('woff2'),
+        url('PilatWide-Heavy.woff') format('woff'),
+        url('PilatWide-Heavy.ttf') format('truetype'),
+        url('PilatWide-Heavy.svg#PilatWide-Heavy') format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pilat Wide';
+    src: url('PilatWide-Thin.woff2') format('woff2'),
+        url('PilatWide-Thin.woff') format('woff'),
+        url('PilatWide-Thin.ttf') format('truetype'),
+        url('PilatWide-Thin.svg#PilatWide-Thin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pilat Wide';
+    src: url('PilatWide-Bold.woff2') format('woff2'),
+        url('PilatWide-Bold.woff') format('woff'),
+        url('PilatWide-Bold.ttf') format('truetype'),
+        url('PilatWide-Bold.svg#PilatWide-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pilat Wide';
+    src: url('PilatWide-Regular.woff2') format('woff2'),
+        url('PilatWide-Regular.woff') format('woff'),
+        url('PilatWide-Regular.ttf') format('truetype'),
+        url('PilatWide-Regular.svg#PilatWide-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pilat Wide Book';
+    src: url('PilatWide-Book.woff2') format('woff2'),
+        url('PilatWide-Book.woff') format('woff'),
+        url('PilatWide-Book.ttf') format('truetype'),
+        url('PilatWide-Book.svg#PilatWide-Book') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pilat Wide Demi';
+    src: url('PilatWide-DemiBold.woff2') format('woff2'),
+        url('PilatWide-DemiBold.woff') format('woff'),
+        url('PilatWide-DemiBold.ttf') format('truetype'),
+        url('PilatWide-DemiBold.svg#PilatWide-DemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pilat Wide';
+    src: url('PilatWide-Black.woff2') format('woff2'),
+        url('PilatWide-Black.woff') format('woff'),
+        url('PilatWide-Black.ttf') format('truetype'),
+        url('PilatWide-Black.svg#PilatWide-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
+

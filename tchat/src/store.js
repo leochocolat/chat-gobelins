@@ -2,66 +2,71 @@
 import Vue from 'vue';
 import router from './router';
 import io from 'socket.io-client';
+import { TweenLite } from 'gsap';
 
-const socket = io('http://localhost:3000');
-// const socket = io('https://bddi-2019-chat.herokuapp.com/');
+// const socket = io('http://localhost:3000');
+const socket = io('https://bddi-2019-chat.herokuapp.com/');
 
 socket.on('connect', () => {
-
     const sessionUser = sessionStorage.getItem('user');
     if (sessionUser) {
         store.registerUser(JSON.parse(sessionUser).username);
     }
+});
 
-    socket.on('user registered', (user) => {
-        store.user = user;
-        store.isRegistered = true;
-        sessionStorage.setItem('user', JSON.stringify(user));
-    });
+socket.on('user registered', (user) => {
+    store.user = user;
+    store.isRegistered = true;
+    sessionStorage.setItem('user', JSON.stringify(user));
+});
 
-    socket.on('users update', ({users}) => {
-        store.users = users;
-    });
+socket.on('users update', ({users}) => {
+    store.users = users;
+});
 
-    socket.on('message new', ({message, messages}) => {
-        let newArray = [];
-
-        if (messages > store.messages) {
-            for (let i = 0; i < messages.length; i++) {
-                messages[i].style = store.getRandomStyle();
-                store.messages.push(messages[i]);
-            }
-        } else {
-            message.style = store.getRandomStyle();
-            store.messages.push(message);
+socket.on('message new', ({message, messages}) => {
+    if (messages > store.messages) {
+        for (let i = store.messages.length; i < messages.length; i++) {
+            messages[i].style = store.getRandomStyle();
+            store.messages.push(messages[i]);
         }
-        console.log(newArray);
-    });
+    } else {
+        message.style = store.getRandomStyle();
+        store.messages.push(message);
+    }
+});
 
-    // socket.on('message update', ({messages}) => {
-    //     console.log('MESSAGE UPDATE');
-    //     let newArray = messages.slice(store.messages.length - 1);
-    //     for (let i = 0; i < newArray.length; i++) {
-    //         newArray[i].style = store.getRandomStyle();
-    //         store.messages.push(newArray[i]);
-    //     }
-    // });
+socket.on('messages update', ({ messages }) => {
+    console.log('MESSAGE UPDATE');
+    let newArray = messages.slice(store.messages.length);
+    for (let i = 0; i < newArray.length; i++) {
+        newArray[i].style = store.getRandomStyle();
+        store.messages.push(newArray[i]);
+    }
+});
 
-    socket.on('command new', (msg) => {
-        console.log(msg.message.text);
-        if (msg.message.text == '/shake') {
-            for (let i = 0; i < store.messages.length; i++) {
-                store.messages[i].style = store.getRandomStyle();
-            }
+socket.on('command new', (msg) => {
+    if (msg.command == 'shake') {
+        let newArray = store.messages;
+        for (let i = 0; i < newArray.length; i++) {
+            newArray[i].style = store.getRandomStyle();
         }
-        if (msg.message.text == '/clear') {
-            store.messages = [];
-        }
-    });
+        store.messages = newArray;
+    }
+    if (msg.command == 'clear') {
+        console.log('clear');
+        store.messages = [];
+    }
+    if (msg.command == 'screenshot') {
+        console.log('flash')
+        let flash = document.querySelector('.flash');
+        TweenLite.to(flash, .1, { autoAlpha: .8 });
+        TweenLite.to(flash, .1, { autoAlpha: 0, delay: 0.1 });
+    }
+});
 
-    socket.on('chat error', ({ code, message }) => {
-        console.error(`error ${code}: ${message}`);
-    });
+socket.on('chat error', ({ code, message }) => {
+    console.error(`error ${code}: ${message}`);
 });
 
 const store = new Vue({

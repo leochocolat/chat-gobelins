@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'Americana Std';
+    src: url('AmericanaStd.woff2') format('woff2'),
+        url('AmericanaStd.woff') format('woff'),
+        url('AmericanaStd.ttf') format('truetype'),
+        url('AmericanaStd.svg#AmericanaStd') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Americana Std';
+    src: url('AmericanaStd-Bold.woff2') format('woff2'),
+        url('AmericanaStd-Bold.woff') format('woff'),
+        url('AmericanaStd-Bold.ttf') format('truetype'),
+        url('AmericanaStd-Bold.svg#AmericanaStd-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Americana Std';
+    src: url('AmericanaStd-Italic.woff2') format('woff2'),
+        url('AmericanaStd-Italic.woff') format('woff'),
+        url('AmericanaStd-Italic.ttf') format('truetype'),
+        url('AmericanaStd-Italic.svg#AmericanaStd-Italic') format('svg');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Americana Std';
+    src: url('AmericanaStd-ExtraBold.woff2') format('woff2'),
+        url('AmericanaStd-ExtraBold.woff') format('woff'),
+        url('AmericanaStd-ExtraBold.ttf') format('truetype'),
+        url('AmericanaStd-ExtraBold.svg#AmericanaStd-ExtraBold') format('svg');
+    font-weight: 800;
+    font-style: normal;
+}
+

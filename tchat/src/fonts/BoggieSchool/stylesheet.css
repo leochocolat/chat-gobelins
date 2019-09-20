@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Boogie School';
+    src: url('BoogieSchool-Bold.woff2') format('woff2'),
+        url('BoogieSchool-Bold.woff') format('woff'),
+        url('BoogieSchool-Bold.ttf') format('truetype'),
+        url('BoogieSchool-Bold.svg#BoogieSchool-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+

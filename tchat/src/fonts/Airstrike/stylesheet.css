@@ -1,0 +1,140 @@
+@font-face {
+    font-family: 'Airstrike Bold 3D';
+    src: url('AirstrikeBold3D.woff2') format('woff2'),
+        url('AirstrikeBold3D.woff') format('woff'),
+        url('AirstrikeBold3D.ttf') format('truetype'),
+        url('AirstrikeBold3D.svg#AirstrikeBold3D') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Airstrike 3D';
+    src: url('Airstrike3D.woff2') format('woff2'),
+        url('Airstrike3D.woff') format('woff'),
+        url('Airstrike3D.ttf') format('truetype'),
+        url('Airstrike3D.svg#Airstrike3D') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Airstrike Expanded';
+    src: url('AirstrikeExpanded.woff2') format('woff2'),
+        url('AirstrikeExpanded.woff') format('woff'),
+        url('AirstrikeExpanded.ttf') format('truetype'),
+        url('AirstrikeExpanded.svg#AirstrikeExpanded') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Airstrike';
+    src: url('Airstrike.woff2') format('woff2'),
+        url('Airstrike.woff') format('woff'),
+        url('Airstrike.ttf') format('truetype'),
+        url('Airstrike.svg#Airstrike') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Airstrike Half-Tone';
+    src: url('AirstrikeHalf-Tone.woff2') format('woff2'),
+        url('AirstrikeHalf-Tone.woff') format('woff'),
+        url('AirstrikeHalf-Tone.ttf') format('truetype'),
+        url('AirstrikeHalf-Tone.svg#AirstrikeHalf-Tone') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Airstrike Condensed';
+    src: url('AirstrikeCondensed.woff2') format('woff2'),
+        url('AirstrikeCondensed.woff') format('woff'),
+        url('AirstrikeCondensed.ttf') format('truetype'),
+        url('AirstrikeCondensed.svg#AirstrikeCondensed') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Airstrike Platinum';
+    src: url('AirstrikePlatinum.woff2') format('woff2'),
+        url('AirstrikePlatinum.woff') format('woff'),
+        url('AirstrikePlatinum.ttf') format('truetype'),
+        url('AirstrikePlatinum.svg#AirstrikePlatinum') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Airstrike Gradient';
+    src: url('AirstrikeGradient.woff2') format('woff2'),
+        url('AirstrikeGradient.woff') format('woff'),
+        url('AirstrikeGradient.ttf') format('truetype'),
+        url('AirstrikeGradient.svg#AirstrikeGradient') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Airstrike';
+    src: url('AirstrikeBold.woff2') format('woff2'),
+        url('AirstrikeBold.woff') format('woff'),
+        url('AirstrikeBold.ttf') format('truetype'),
+        url('AirstrikeBold.svg#AirstrikeBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Airstrike';
+    src: url('Airstrike_1.woff2') format('woff2'),
+        url('Airstrike_1.woff') format('woff'),
+        url('Airstrike_1.ttf') format('truetype'),
+        url('Airstrike_1.svg#Airstrike') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Airstrike Bullet';
+    src: url('AirstrikeBullet.woff2') format('woff2'),
+        url('AirstrikeBullet.woff') format('woff'),
+        url('AirstrikeBullet.ttf') format('truetype'),
+        url('AirstrikeBullet.svg#AirstrikeBullet') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Airstrike Chrome';
+    src: url('AirstrikeChrome.woff2') format('woff2'),
+        url('AirstrikeChrome.woff') format('woff'),
+        url('AirstrikeChrome.ttf') format('truetype'),
+        url('AirstrikeChrome.svg#AirstrikeChrome') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Airstrike Laser';
+    src: url('AirstrikeLaser.woff2') format('woff2'),
+        url('AirstrikeLaser.woff') format('woff'),
+        url('AirstrikeLaser.ttf') format('truetype'),
+        url('AirstrikeLaser.svg#AirstrikeLaser') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Airstrike Outline';
+    src: url('AirstrikeOutline.woff2') format('woff2'),
+        url('AirstrikeOutline.woff') format('woff'),
+        url('AirstrikeOutline.ttf') format('truetype'),
+        url('AirstrikeOutline.svg#AirstrikeOutline') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
